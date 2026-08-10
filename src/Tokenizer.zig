@@ -170,7 +170,6 @@ pub const Token = struct {
         };
 
         pub fn getSelection(loc: Loc, code: [:0]const u8) Selection {
-            //TODO: ziglyph
             var selection: Selection = .{
                 .start = .{ .line = 1, .col = 1 },
                 .end = undefined,

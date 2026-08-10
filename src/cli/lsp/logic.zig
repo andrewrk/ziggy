@@ -54,7 +54,12 @@ pub fn loadFile(
                                 .character = sel.end.col - 1,
                             },
                         },
-                        .message = msg,
+                        .message = .{
+                            .markup_content = .{
+                                .kind = .markdown,
+                                .value = msg,
+                            },
+                        },
                     };
                 }
 
@@ -100,7 +105,12 @@ pub fn loadFile(
                                 },
                             },
                             .severity = .Error,
-                            .message = msg,
+                            .message = .{
+                                .markup_content = .{
+                                    .kind = .markdown,
+                                    .value = msg,
+                                },
+                            },
                         };
                     }
 
@@ -166,7 +176,12 @@ pub fn loadFile(
                         .wrong_field_style, .wrong_field_separator => .Information,
                         else => .Error,
                     },
-                    .message = msg,
+                    .message = .{
+                        .markup_content = .{
+                            .kind = .markdown,
+                            .value = msg,
+                        },
+                    },
                 };
             }
 
@@ -185,7 +200,12 @@ pub fn loadFile(
                         },
                     },
                     .severity = .Error,
-                    .message = msg,
+                    .message = .{
+                        .markup_content = .{
+                            .kind = .markdown,
+                            .value = msg,
+                        },
+                    },
                 };
             }
 

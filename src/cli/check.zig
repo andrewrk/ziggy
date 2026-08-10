@@ -507,7 +507,7 @@ pub const Command = struct {
 
 fn fatal(comptime fmt: []const u8, args: anytype) noreturn {
     std.debug.print("fatal error: " ++ fmt ++ "\n", args);
-    if (builtin.mode == .Debug) @breakpoint();
+    if (builtin.mode == .debug) @breakpoint();
     std.process.exit(1);
 }
 
